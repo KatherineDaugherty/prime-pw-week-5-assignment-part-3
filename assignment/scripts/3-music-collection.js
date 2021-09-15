@@ -2,12 +2,16 @@ console.log('***** Music Collection *****')
 
 let collection = []
 
-let CDs = {
+let album = {
   title: 'Light Chasers',
   artist: 'Cloud Cult',
   yearPublished: '2010'
 }
 
 function addToCollection( title, artist, yearPublished){
-  return Collection
+  let album = { [title:] [artist:] [yearPublished:]}
+  collection.push(album);
+  return collection
 }
+
+addToCollection('Light Chasers', 'Cloud Cult', '2010');
