@@ -2,16 +2,27 @@ console.log('***** Music Collection *****')
 
 let collection = []
 
-let album = {
-  title: 'Light Chasers',
-  artist: 'Cloud Cult',
-  yearPublished: '2010'
-}
-
-function addToCollection( title, artist, yearPublished){
-  let album = { [title:] [artist:] [yearPublished:]}
+function addToCollection( albumTitle, albumArtist, albumYearPublished){
+  let album = { title: albumTitle, artist: albumArtist, yearPublished: albumYearPublished}
   collection.push(album);
   return collection
 }
 
 addToCollection('Light Chasers', 'Cloud Cult', '2010');
+console.log(collection);
+
+addToCollection('IN LIFE', 'Stray Kids', '2020');
+console.log(collection);
+
+addToCollection('Future Nostalgia','Dua Lipa','2020');
+console.log(collection);
+
+addToCollection('NO EASY', 'Stray Kids', '2021');
+console.log(collection)
+
+addToCollection('Danger Days', "My Chemical Romance", '2010');
+console.log(collection);
+
+addToCollection('Moana Soundtrack', 'Disney', '2016');
+console.log(collection);
+
