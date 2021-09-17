@@ -12,22 +12,17 @@ function addToCollection( albumTitle, albumArtist, albumYearPublished){
   collection.push(album); //Add the new object to the end of the collection array
   return album; //Return the newly created object
 } //end function
-
 console.log('-------Section 2 ---------add albums -------------');
-
 //Test the addToCollection function:
-
 
 //Add 6 albums to your collection. Aim to have a mix of both same and different artists and published years. (Feel free to share your musical interests, or make stuff up. Totally fine either way.)
 //Console.log each album as added using the returned value.
-
 console.log(addToCollection('Light Chasers', 'Cloud Cult', '2010'));
 console.log(addToCollection('IN LIFE', 'Stray Kids', '2020'));
 console.log(addToCollection('Future Nostalgia','Dua Lipa','2020'));
 console.log(addToCollection('NO EASY', 'Stray Kids', '2021'));
 console.log(addToCollection('Danger Days', "My Chemical Romance", '2010'));
 console.log(addToCollection('Moana Soundtrack', 'Disney', '2016'));
-
 //After all are added, console.log the collection array.
 
 console.log('---------------Print Collection Array----------------');
@@ -49,11 +44,10 @@ function showCollection (array){
   //(This allows it to be reused to show any collection, like the results from the find or search.)
   for(let album of array){ 
     console.log(`${album.title} by ${album.artist} published in ${album.yearPublished}`);
-    //Console.log the number of items in the array.
  }// end loop
+ console.log('number of items in collection:' + collection.length); //Console.log the number of items in the array.
 }
 showCollection(collection);
-
 console.log('---------findByArtist-----LAST REQUIRED SECTION----');
 
 
@@ -66,16 +60,16 @@ console.log('---------findByArtist-----LAST REQUIRED SECTION----');
 function findByArtist (artist){
   let foundArtist = [];  //Create an array to hold any results, empty to start
   for (let album of collection) {
-    if (artist === album.artist){
-    foundArtist.push (collection[0]);
+    if(artist === album.artist){
+    foundArtist.push (album);
     console.log (`albums found by artist: ${foundArtist.length}`)
-    console.log(foundArtist[0]);
+    console.log(foundArtist);
     } // artist === album
   } //album in collection
 }// findByArtist Funciton
 
-findByArtist('Cloud Cult');
-console.log(foundArtist());
+findByArtist('Stray Kids');
+
 
 //Test the findByArtist function. 
 //Make sure to test with an artist you know is in the collection, 
