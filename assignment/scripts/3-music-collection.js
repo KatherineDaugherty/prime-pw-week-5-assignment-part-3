@@ -1,6 +1,5 @@
 console.log('***** Music Collection *****')
 
-
 console.log('-----------Section 1--------------------------');
 //Create a variable collection that starts as an empty array.
 let collection = []
@@ -48,8 +47,8 @@ function showCollection (array){
   console.log(array);
   //Loop over the array and console.log each album's information formatted like: TITLE by ARTIST, published in YEAR.
   //(This allows it to be reused to show any collection, like the results from the find or search.)
-  for(taco of array){ 
-    console.log(`${taco.title} by ${taco.artist} published in ${taco.yearPublished}`);
+  for(let album of array){ 
+    console.log(`${album.title} by ${album.artist} published in ${album.yearPublished}`);
     //Console.log the number of items in the array.
  }// end loop
 }
@@ -66,13 +65,17 @@ console.log('---------findByArtist-----LAST REQUIRED SECTION----');
 //Take in artist (a string) parameter
 function findByArtist (artist){
   let foundArtist = [];  //Create an array to hold any results, empty to start
-  for (let i in collection) {
-    if (artist === collection [i]);
-    found.push [i];
-  } console.log (`albums found ${found.length}, found`);
-} 
-console.log(findByArtist('Cloud Cult'));
+  for (let album of collection) {
+    if (artist === album.artist){
+    foundArtist.push (collection[0]);
+    console.log (`albums found by artist: ${foundArtist.length}`)
+    console.log(foundArtist[0]);
+    } // artist === album
+  } //album in collection
+}// findByArtist Funciton
 
+findByArtist('Cloud Cult');
+console.log(foundArtist());
 
 //Test the findByArtist function. 
 //Make sure to test with an artist you know is in the collection, 
@@ -80,6 +83,3 @@ console.log(findByArtist('Cloud Cult'));
 //Check that for artists with multiple matches, all are found.
 
 
-
-
- 
